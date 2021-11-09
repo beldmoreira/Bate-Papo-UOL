@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:#F3F3F3;
+    width: 375px;
+}
+.topo{
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoUol{
+    padding-left:22px; 
+    
+}
+.bonequinhos{
+   padding-right:22.41px;
+}
+.borda{
+    height: 26px;
+}
+.primeira-mensagem{
+    height: 40px;
+    top: 106px;
+    border-radius: 2px; 
+    background-color:#DCDCDC;
+    display:flex;
+    align-items:center;
+}
+.tipografia-mensagem{
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.separacao-mensagens{
+    height:4px;
+    background-color:5px red;
+}
+.segunda-mensagem{
+    height: 40px;
+    top: 106px;
+    border-radius: 2px; 
+    background-color: #FFFFFF;
+    display:flex;
+    align-items:center;
+}
+.terceira-mensagem{
+    height: 40px;
+    top: 106px;
+    border-radius: 2px; 
+    background-color: #FFFFFF;
+    display:flex;
+    align-items:center;
+}
+
+.quarta-mensagem{
+    height: 63px;
+    left: 0px;
+    top: 238px;
+    border-radius: 2px;
+    background-color: #FFDEDE;
+    display:flex;
+    align-items:center;
+}
+.quinta-mensagem{
+    height: 40px;
+    left: 0px;
+    top: 305px;
+    border-radius: 2px;
+    background-color:#DCDCDC;
+    display:flex;
+    align-items:center;
+}
