@@ -14,14 +14,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left:22px;
+    padding-right: 22.41px;
 }
-.logoUol{
-    margin-left:22px; 
-    
-}
-.bonequinhos{
-   margin-right:22.41px;
-}
+
 .borda{
     height: 22px;
 }
@@ -34,11 +30,8 @@ body{
     display:flex;
     align-items:center;
 }
-.tipografia-horario{
+.horario{
    color:#AAAAAA;
-}
-.separacao-mensagens{
-    height:4px;
 }
 .mensagem-branca{
     height: 40px;
@@ -60,17 +53,9 @@ body{
     display:flex;
     align-items:center;
 }
-.quinta-mensagem{
-    height: 40px;
-    left: 0px;
-    top: 305px;
-    border-radius: 2px;
-    background-color:#DCDCDC;
-    display:flex;
-    align-items:center;
-}
-.espaco-livre{
-    height:242px;
+
+.espaco-disponivel{
+    height:485px;
 }
 .barra-mensagem{
     height: 80px;
@@ -79,15 +64,13 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center; 
+    padding-right:18px;
+    padding-left: 17px;
 }
-
-.aviaozinho{
-    border: none;
-    background-color:#FFFFFF;
-    margin-right:18px;
-}
-
 input [type= text]{
+    height: 30px;
+    width: 300px;
+    border:none;
     font-family: Roboto;
     font-size: 18px;
     font-style: normal;
@@ -95,5 +78,8 @@ input [type= text]{
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-    margin-left:17px;
+}
+.aviaozinho{
+    border: none;
+    background-color:#FFFFFF;
 }
