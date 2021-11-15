@@ -9,8 +9,9 @@ function escolherNome () {
   const promessa = axios.post("https://mock-api.driven.com.br/api/v4/uol/participants",{"name": nome})
   promessa.then(tratarSucesso); 
   promessa.catch(tratarErro);
-
+  
 }
+
 
 
 
@@ -31,7 +32,9 @@ function escolherNome () {
 
 
 function tratarSucesso(resposta) { 
-  console.log("Voltou a resposta");
+  setInterval(function checarStatus(){
+    axios.post("https://mock-api.driven.com.br/api/v4/uol/status", {"name": nome})
+  }, 5000)
 }
 
 function tratarErro(erro) {
