@@ -44,6 +44,23 @@ function tratarErro(erro) {
   promessa.catch(tratarErro);
   }
 }
+function recarrega(){
+  setInterval(buscarMensagem, 3000)
+}
+function criarMensagemTela(mensagem){
+  const comunicacao = document.createElement("div")
+  comunicacao.classList.add("mensagem")
+  if(mensagem.type == "status"){
+    comunicacao.classList.add("mensagem-cinza")
+  }
+  else if(mensagem.type == "private_message" ){
+    comunicacao.classList.add("mensagem-rosa")
+  }
+  else if (mensagem.type == "message"){
+    comunicacao.classList.add("mensagem-branca")
+  }
 
+}
+recarrega()
 escolherNome()
 buscarParticipante()
