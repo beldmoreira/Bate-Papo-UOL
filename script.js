@@ -1,8 +1,8 @@
 let nome = null;
 
-//const promessa = axios.get("https://...")
-//promessa.then(tratarSucesso); 
-//promessa.catch(tratarErro);
+//Fazer com que um elemento apareça na tela//
+  //  const elementoQueQueroQueApareca = document.querySelector('.mensagem');
+   // elementoQueQueroQueApareca.scrollIntoView()
 
 function escolherNome () {
   nome = prompt("Qual seu lindo nome?")
@@ -12,25 +12,17 @@ function escolherNome () {
   
 }
 
+function buscarMensagem(){
+   const mensagem = axios.get("https://mock-api.driven.com.br/api/v4/uol/messages")
+   mensagem.then(
+   function (resposta){
+   }); 
+  }
 
-
-
-//function enviarMensagem(){
-  //  const mensagem = axios.post("https://mock-api.driven.com.br/api/v4/uol/messages")
-    //{
-	//from: "nome do usuário",
-	//to: "nome do destinatário (Todos se não for um específico)",
-	//text: "mensagem digitada",
-	//type: "message" // ou "private_message" para o bônus
-
-  //Fazer com que um elemento apareça na tela//
-  //  const elementoQueQueroQueApareca = document.querySelector('.mensagem');
-   // elementoQueQueroQueApareca.scrollIntoView()
-
-   //setTimeout(function avisarServidor(){ alert("Hello"); }, 3000);
-
-
-
+function enviarMensagens(){
+  const = axios.post("https://mock-api.driven.com.br/api/v4/uol/messages")
+  .then()
+}
 function tratarSucesso(resposta) { 
   setInterval(function checarStatus(){
     axios.post("https://mock-api.driven.com.br/api/v4/uol/status", {"name": nome})
