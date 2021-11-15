@@ -24,6 +24,9 @@ function enviarMensagens(text){
     type:"message"
   })
 }
+function buscarParticipante(){
+ const participantes = axios.get("https://mock-api.driven.com.br/api/v4/uol/participants")
+}
 
 function tratarSucesso(resposta) { 
   setInterval(function checarStatus(){
@@ -43,3 +46,4 @@ function tratarErro(erro) {
 }
 
 escolherNome()
+buscarParticipante()
