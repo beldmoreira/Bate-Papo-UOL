@@ -28,35 +28,24 @@ body{
 .nome{
     font-weight: bold;
  }
-.mensagem-cinza{
+
+ .mensagem{
     height: 40px;
-    top: 106px;
     margin-top:4px;
-    border-radius: 2px; 
-    background-color:#DCDCDC;
+    border-radius: 2px;
     display:flex;
     align-items:center;
+ }
+.mensagem-cinza{
+    background-color:#DCDCDC;
 }
 
 .mensagem-branca{
-    height: 40px;
-    top: 106px;
-    margin-top:4px;
-    border-radius: 2px; 
     background-color: #FFFFFF;
-    display:flex;
-    align-items:center;
 }
 
 .mensagem-rosa{
-    height: 63px;
-    left: 0px;
-    top: 238px;
-    margin-top:4px;
-    border-radius: 2px;
     background-color: #FFDEDE;
-    display:flex;
-    align-items:center;
 }
 
 .espaco-disponivel{
