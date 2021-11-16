@@ -18,6 +18,11 @@ function buscarMensagem(){
    }); 
   }
 
+  function envio(){
+   const texto = document.querySelector("#campo-de-texto").value
+   enviarMensagens(texto)
+  }
+
 function enviarMensagens(text){
   const envio= axios.post("https://mock-api.driven.com.br/api/v4/uol/messages",
   {
@@ -26,6 +31,8 @@ function enviarMensagens(text){
     text:text,
     type:"message"
   })
+  envio.then(buscarMensagem)
+  envio.catch(window.location.reload)
 }
 function buscarParticipante(){
  const participantes = axios.get("https://mock-api.driven.com.br/api/v4/uol/participants")
@@ -55,6 +62,7 @@ function criarMensagemTela(mensagem){
     return
   }
   const comunicacao = document.createElement("div")
+  comunicacao.setAttribute("data-identifier","message");
   comunicacao.classList.add("mensagem")
   const hora = `<span class= "horario">(${mensagem.time})</span> `
   let espaco = document.querySelector(".espaco-disponivel")
