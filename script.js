@@ -12,6 +12,9 @@ function buscarMensagem(){
    const mensagem = axios.get("https://mock-api.driven.com.br/api/v4/uol/messages")
    mensagem.then(
    function (resposta){
+     for (let i=0; i < resposta.data.length; i++){
+       criarMensagemTela(resposta.data[i])
+     }
    }); 
   }
 
@@ -50,17 +53,24 @@ function recarrega(){
 function criarMensagemTela(mensagem){
   const comunicacao = document.createElement("div")
   comunicacao.classList.add("mensagem")
+  const hora = `<span class= "horario">(${mensagem.time})</span> `
+  let espaco = document.querySelector(".espaco-disponivel")
   if(mensagem.type == "status"){
+    comunicacao.innerHTML =`${hora}&nbsp;<span class="nome">${mensagem.from}</span>&nbsp;${mensagem.text}`
     comunicacao.classList.add("mensagem-cinza")
   }
-  else if(mensagem.type == "private_message" ){
+  else if(mensagem.type == "private_message"){
+    comunicacao.innerHTML =`${hora}&nbsp;<span class="nome">${mensagem.from}</span>&nbsp;reservadamente&nbsp;para&nbsp;<span class="nome">${mensagem.to}</span>:&nbsp; ${mensagem.text}`
     comunicacao.classList.add("mensagem-rosa")
   }
   else if (mensagem.type == "message"){
+    comunicacao.innerHTML =`${hora}&nbsp;<span class="nome">${mensagem.from}</span>&nbsp;para&nbsp;<span class="nome"> ${mensagem.to}</span>:&nbsp; ${mensagem.text}`
     comunicacao.classList.add("mensagem-branca")
   }
-
+  espaco.appendChild(comunicacao)
+  comunicacao.scrollIntoView()
 }
+
 recarrega()
 escolherNome()
 buscarParticipante()
