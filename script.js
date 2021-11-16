@@ -51,6 +51,9 @@ function recarrega(){
   setInterval(buscarMensagem, 3000)
 }
 function criarMensagemTela(mensagem){
+  if(mensagem.type =="private_message" && mensagem.to !== nome){
+    return
+  }
   const comunicacao = document.createElement("div")
   comunicacao.classList.add("mensagem")
   const hora = `<span class= "horario">(${mensagem.time})</span> `
