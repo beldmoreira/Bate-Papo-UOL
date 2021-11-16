@@ -50,6 +50,7 @@ body{
 
 .espaco-disponivel{
     height:485px;
+    overflow-y:scroll;
 }
 .barra-mensagem{
     height: 80px;
